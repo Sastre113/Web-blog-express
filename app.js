@@ -25,13 +25,7 @@ app.use(express.urlencoded({
 
 app.get('/',  async (req, res) => {
   console.log(`Estamos en Bievendido`);
-  const tests = await Test.find({})
-  res.render('index', { title: 'Bienvenido',tests});
-});
-
-app.get('/form', (req, res) => {
-  console.log(`Estamos en Enviar Test`);
-  res.render('form', { title: 'Test' });
+  res.render('index', { title: 'Bienvenido'});
 });
 
 app.get('/test', async (req, res) => {
