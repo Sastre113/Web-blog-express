@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/header.ejs") %>
+        <%- include("./partials/nav.ejs") %>
+    </header>
+    <main>
+        <div class="tests content">
+            <h2>All Tests</h2>
+            <% if (tests.length > 0) { %>
+            <% tests.forEach(test => { %>
+
+            <h3 class="title"><%= test.pregunta %></h3>
+            <ul>
+                <li><%= test.resp1 %></li>
+                <li><%= test.resp2 %></li>
+                <li><%= test.resp3 %></li>
+                <li><%= test.resp4 %></li>
+            </ul>
+
+            <% }) %>
+            <% } else { %>
+            <p>There are no tests to display...</p>
+            <% } %>
+
+        </div>
+
+    </main>
+    <footer>
+        <%- include("./partials/footer.ejs") %>
+    </footer>
+</body>
+
+</html>

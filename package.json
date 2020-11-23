@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.15"
+  },
+  "name": "web-examinatron",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -r dotenv/config app.js"
+  },
+  "author": "Miguel.A Sastre",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sastre115/Web-Examinatron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sastre115/Web-Examinatron/issues"
+  },
+  "homepage": "https://github.com/Sastre115/Web-Examinatron#readme",
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}
