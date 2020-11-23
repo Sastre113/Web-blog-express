@@ -1,5 +1,5 @@
 const express = require('express')
-const Blog = require('../models/question.js') // MODELO DEL RECURSO
+const Blog = require('../models/blog.js') // MODELO DEL RECURSO
 const router = new express.Router()
 
  
@@ -9,7 +9,7 @@ router.post('/blogs' // NOMBRE DE RECURSOS
 
     try {
         await blog.save()
-        res.redirect('/create');
+        res.redirect('/index');
         //res.status(201).send(blog) // Esto muestra lo añadido
     } catch (e) {
         res.status(400).send(e)

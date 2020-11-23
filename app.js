@@ -1,8 +1,8 @@
 const express = require('express');
-const Test = require('./models/question');
+const Test = require('./models/blog');
 require('./db/mongoose');
 
-const testRouter = require('./routers/question');
+const testRouter = require('./routers/blog');
 const port = process.env.PORT || 3000;
 
 // express app
@@ -28,13 +28,13 @@ app.get('/',  async (req, res) => {
   res.render('index', { title: 'Bienvenido'});
 });
 
-app.get('/test', async (req, res) => {
+app.get('/blog', async (req, res) => {
   console.log(`Estamos en Test`);
   try {
-    const tests = await Test.find({})
-    res.render('test', { title: 'Test' , tests});
+    const blogs = await Blog.find({})
+    res.render('blog', { title: 'Test' , blogs});
   } catch (error) {
-    res.render('test', { title: 'Test' , tests: [] });
+    res.render('blog', { title: 'Test' , blogs: [] });
   }
 });
 
