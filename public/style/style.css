@@ -6,7 +6,7 @@
 
 /* Titulo */
 #cabecera {
-  background-image: url(./img/cabeceraEngranajes.jpg);
+  background-image: url(../img/cabeceraEngranajes.jpg);
   background-color: white;
   height: 100px;
 }
@@ -77,6 +77,11 @@
   background-color: black;
   color: white;
   border-radius: 5px;
+}
+
+#blog{
+  padding: 10px;
+  margin:10px
 }
 
 /* Pie de pagina */
