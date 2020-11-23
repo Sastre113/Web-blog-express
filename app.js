@@ -1,5 +1,5 @@
 const express = require('express');
-const Test = require('./models/blog');
+const Blog = require('./models/blog');
 require('./db/mongoose');
 
 const testRouter = require('./routers/blog');
