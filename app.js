@@ -29,12 +29,12 @@ app.get('/',  async (req, res) => {
 });
 
 app.get('/blog', async (req, res) => {
-  console.log(`Estamos en Test`);
+  console.log(`Estamos en Blog`);
   try {
     const blogs = await Blog.find({})
-    res.render('blog', { title: 'Test' , blogs});
+    res.render('blog', { title: 'Blog' , blogs});
   } catch (error) {
-    res.render('blog', { title: 'Test' , blogs: [] });
+    res.render('blog', { title: 'Blog' , blogs: [] });
   }
 });
 
