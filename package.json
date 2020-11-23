@@ -11,7 +11,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon -r dotenv/config app.js",
-    "sass": "sass --watch public/css/style/"
+    "sass": "sass --watch public/style/"
   },
   "author": "Miguel.A Sastre",
   "license": "ISC",
