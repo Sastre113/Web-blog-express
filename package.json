@@ -2,7 +2,8 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.15"
+    "mongoose": "^5.10.15",
+    "sass": "^1.29.0"
   },
   "name": "web-examinatron",
   "version": "1.0.0",
