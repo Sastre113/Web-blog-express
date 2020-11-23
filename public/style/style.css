@@ -6,7 +6,7 @@
 
 /* Titulo */
 #cabecera {
-  background-image: url(../img/cabeceraEngranajes.jpg);
+  background-image: url(./img/cabeceraEngranajes.jpg);
   background-color: white;
   height: 100px;
 }
@@ -56,11 +56,12 @@
 
 .middle {
   grid-area: middle;
+  background-color: red;
 }
 
 .grid-container {
   display: grid;
-  grid-template-areas: "exterior middle middle middle exterior";
+  grid-template-areas: 'exterior middle middle middle exterior';
   grid-gap: 10px;
   background-color: blue;
 }
@@ -79,11 +80,6 @@
   border-radius: 5px;
 }
 
-#blog{
-  padding: 10px;
-  margin:10px
-}
-
 /* Pie de pagina */
 #footerBlock {
   margin-top: 10px;
@@ -99,5 +95,3 @@
   color: white;
   text-align: center;
 }
-
-/*# sourceMappingURL=style.css.map */
