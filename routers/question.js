@@ -1,47 +1,47 @@
 const express = require('express')
-const Test = require('../models/question.js') // MODELO DEL RECURSO
+const Blog = require('../models/question.js') // MODELO DEL RECURSO
 const router = new express.Router()
 
  
-router.post('/tests' // NOMBRE DE RECURSOS
+router.post('/blogs' // NOMBRE DE RECURSOS
 , async (req, res) => {
-    const test = new Test(req.body)
+    const blog = new Blog(req.body)
 
     try {
-        await test.save()
+        await blog.save()
         res.redirect('/create');
-        //res.status(201).send(test) // Esto muestra lo añadido
+        //res.status(201).send(blog) // Esto muestra lo añadido
     } catch (e) {
         res.status(400).send(e)
     }
 })
 
-router.get('/tests', async (req, res) => {
+router.get('/blogs', async (req, res) => {
     try {
-        const test = await Test.find({})
-        res.send(test)
+        const blog = await Blog.find({})
+        res.send(blog)
     } catch (e) {
         res.status(500).send()
     }
 })
 
-router.get('/tests/:id', async (req, res) => {
+router.get('/blogs/:id', async (req, res) => {
     const _id = req.params.id
 
     try {
-        const test = await Test.findById(_id)
+        const blog = await Blog.findById(_id)
 
-        if (!test) {
+        if (!blog) {
             return res.status(404).send()
         }
 
-        res.send(test)
+        res.send(blog)
     } catch (e) {
         res.status(500).send()
     }
 })
 
-router.patch('/tests/:id', async (req, res) => {
+router.patch('/blogs/:id', async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['pregunta', 'resp1','resp2','resp3','resp4','solucion',]
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -51,27 +51,27 @@ router.patch('/tests/:id', async (req, res) => {
     }
 
     try {
-        const test = await Test.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+        const blog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
 
-        if (!test) {
+        if (!blog) {
             return res.status(404).send()
         }
 
-        res.send(test)
+        res.send(blog)
     } catch (e) {
         res.status(400).send(e)
     }
 })
 
-router.delete('/tests/:id', async (req, res) => {
+router.delete('/blogs/:id', async (req, res) => {
     try {
-        const test = await Test.findByIdAndDelete(req.params.id)
+        const blog = await Blog.findByIdAndDelete(req.params.id)
 
-        if (!test) {
+        if (!blog) {
             res.status(404).send()
         }
 
-        res.send(test)
+        res.send(blog)
     } catch (e) {
         res.status(500).send()
     }

@@ -11,22 +11,20 @@
         <%- include("./partials/nav.ejs") %>
     </header>
     <main>
-        <div class="tests content">
+        <div>
             <h2>All Tests</h2>
-            <% if (tests.length > 0) { %>
-            <% tests.forEach(test => { %>
+            <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
 
-            <h3 class="title"><%= test.pregunta %></h3>
+            <h3 class="title"><%= blog.title %></h3>
             <ul>
-                <li><%= test.resp1 %></li>
-                <li><%= test.resp2 %></li>
-                <li><%= test.resp3 %></li>
-                <li><%= test.resp4 %></li>
+                <li><%= blog.snippet %></li>
+                <li><%= blog.body %></li>
             </ul>
 
             <% }) %>
             <% } else { %>
-            <p>There are no tests to display...</p>
+            <p>There are no blogs to display...</p>
             <% } %>
 
         </div>

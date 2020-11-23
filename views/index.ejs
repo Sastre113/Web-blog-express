@@ -12,9 +12,20 @@
     </header>
     <main id="grid-container">
         <div id="container">
-            <div class="exterior">Column</div>
-            <div class="middle">Column</div>  
-            <div class="exterior">Column</div>
+            <div class="exterior"></div>
+            <div class="middle">
+                <form action="/api/blogs" method="POST">
+                    <label for="title">Titulo:</label><br>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="snippet">Snippet</label><br>
+                    <input type="text" id="snippet" name="snippet"><br><br>
+                    <label for="body">Body</label><br>
+                    <input type="text" id="body" name="body"><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="exterior"></div>
         </div>
     </main>
     <footer>

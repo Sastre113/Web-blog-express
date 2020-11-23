@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Test = mongoose.model('Test', {
+const Blog = mongoose.model('Blog', {
     title:{
         type: String,
         required: true
@@ -15,4 +15,4 @@ const Test = mongoose.model('Test', {
     }
 })
 
-module.exports = Test;
+module.exports = Blog;
