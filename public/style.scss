@@ -7,8 +7,8 @@
 /* Titulo */
 
 #cabecera {
-    background-image: url(../img/cabeceraEngranajes.jpg);
-    background-color: white;
+    background-image: url(./img/cabecera.jpg);
+    background-color: rgb(68, 177, 240);
     height: 100px;
 }
 
@@ -16,7 +16,8 @@
     text-align: center;
     padding-top: 25px;
     font-family: Goldman;
-    text-shadow: 1px 1px red;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 
 /* Menu de navegacion */
@@ -65,29 +66,39 @@
 }
 
 /* Contenido */
-.exterior{
-    grid-area: exterior;
-}
 
-.middle{
-    grid-area: middle;
-    background-color: red;
-}
-
-.grid-container{
+.grid{
     display: grid;
-    grid-template-areas: 'exterior middle middle middle exterior';
-    grid-gap: 10px;
-    background-color: blue;
-
+    grid-template-columns: 20% 60% 20% ;
+    grid-template-areas: left center right;
+    grid-auto-flow: row;
 }
 
-.blog-content{
+
+.center{
+
     background-color: grey;
     color: white;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+    justify-self: center;
+
+    h2{
+        text-shadow: black 2px 2px;
+        text-align: center;
+    }
+    .title{
+        padding-left: 10px;
+    }
+    
+    .form{
+        text-align: center;
+        input{
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+    }
 }
 
 
@@ -95,8 +106,16 @@
     ul{
         background-color: black;
         color: white;
+        border-radius: 5px;
+        text-align: center;
+
+        li{
+            list-style-type: none;
+        }
     }
 }
+
+
 
 /* Pie de pagina */
 
@@ -105,7 +124,7 @@
     margin-top:10px;
     padding-top: 10px;
     background-color: #333;
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 2.5rem;
     bottom: 0;

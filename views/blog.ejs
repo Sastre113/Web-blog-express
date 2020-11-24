@@ -11,9 +11,10 @@
         <%- include("./partials/nav.ejs") %>
     </header>
     <main>
-        <div class="blog-content">
-            <h2>All Blogs</h2>
-            
+        <div class="grid">
+            <div class="left"></div>
+            <div class="center">
+                <h2>All Blogs <hr></h2>
                 <% if (blogs.length > 0) { %>
                 <% blogs.forEach(blog => { %>
                 <div class="blog">
@@ -24,14 +25,13 @@
                     </ul>
                 </div>
 
-
                 <% }) %>
                 <% } else { %>
                 <p>There are no blogs to display...</p>
                 <% } %>
-
+            </div>
+            <div class="right"></div>
         </div>
-
     </main>
     <footer>
         <%- include("./partials/footer.ejs") %>

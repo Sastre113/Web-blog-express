@@ -17,7 +17,8 @@ app.listen(port, () => {
 app.set('view engine', 'ejs');
 
 // middleware & static files
-app.use('/static', express.static(__dirname + '/public/style/'));
+app.use('/static', express.static(__dirname + '/public'));
+
 app.use(express.urlencoded({
   extended: true
 }))
