@@ -1,5 +1,5 @@
 * {
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -18,6 +18,7 @@
     color: white;
     text-shadow: 2px 2px black;
     padding-top: 25px;
+    margin:0;
 }
 
 /* Menu de navegacion */
@@ -85,6 +86,7 @@
     h2{
         text-shadow: black 2px 2px;
         text-align: center;
+        margin: 0;
     }
     .title{
         padding-left: 10px;
@@ -144,14 +146,15 @@
     margin-top: 10px;
     padding-top: 10px;
     background-color: #333;
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 2.5rem;
-    bottom: 0;
+    height: 50px;
+    bottom: 0%;
     
 }
 
 #footerText {
     color: white;
     text-align: center;
+    margin: 0;
 }

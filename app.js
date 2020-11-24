@@ -49,6 +49,16 @@ app.get('/post/:id', async (req, res) => {
   }
 });
 
+app.get('/usandoAxios', async (req, res) => {
+  console.log(`Estamos en Axios`);
+  try {
+    const blogs = await Blog.find({})
+    res.render('usandoAxios', { title: 'Axios' , blogs});
+  } catch (error) {
+    res.render('usandoAxios', { title: 'Axios' , blogs: [] });
+  }
+});
+
 app.use(express.json());
 app.use('/api', testRouter);
 
