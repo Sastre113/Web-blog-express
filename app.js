@@ -40,7 +40,7 @@ app.get('/blog', async (req, res) => {
 });
 
 app.get('/post/:id', async (req, res) => {
-  console.log(`Estamos en Blog`);
+  console.log(`Estamos en Post`);
   try {
     const post = await Blog.findById(req.params.id)
     res.render('post', { title: 'Post' , post});

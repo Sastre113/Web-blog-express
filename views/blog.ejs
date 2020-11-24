@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <%- include("./partials/head.ejs") %>
-</head>
+<%- include("./partials/head.ejs") %>
+
 
 <body>
     <header>
@@ -14,7 +13,9 @@
         <div class="grid">
             <div class="left"></div>
             <div class="center">
-                <h2>All Blogs <hr></h2>
+                <h2>All Blogs
+                    <hr>
+                </h2>
                 <% if (blogs.length > 0) { %>
                 <% blogs.forEach(blog => { %>
                 <div class="blog">
@@ -34,9 +35,9 @@
             <div class="right"></div>
         </div>
     </main>
-    <footer>
-        <%- include("./partials/footer.ejs") %>
-    </footer>
+
+    <%- include("./partials/footer.ejs") %>
+
 </body>
 
 </html>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <%- include("./partials/head.ejs") %>
-</head>
+<%- include("./partials/head.ejs") %>
 
 <body>
     <header>
@@ -21,8 +19,7 @@
                         <label for="snippet">Tab trigger</label><br>
                         <input type="text" id="snippet" name="snippet"><br><br>
                         <label for="body">Body</label><br>
-                        <textarea type="text" id="body" name="body"
-                        placeholder="Escribé aqui tu snippet"></textarea>
+                        <textarea type="text" id="body" name="body" placeholder="Escribé aqui tu snippet"></textarea>
                         <button id="botonEnviar" type="submit" value="Enviar">Enviar</button>
                     </form>
                 </div>
@@ -30,9 +27,9 @@
             <div class="right"></div>
         </div>
     </main>
-    <footer>
-        <%- include("./partials/footer.ejs") %>
-    </footer>
+
+    <%- include("./partials/footer.ejs") %>
+
 </body>
 
 </html>
