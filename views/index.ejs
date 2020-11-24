@@ -16,12 +16,13 @@
             <div class="center">
                 <div class="form">
                     <form action="/api/blogs" method="POST">
-                        <label for="title">Titulo:</label><br>
+                        <label for="title">Titulo</label><br>
                         <input type="text" id="title" name="title"><br>
-                        <label for="snippet">Snippet</label><br>
+                        <label for="snippet">Tab trigger</label><br>
                         <input type="text" id="snippet" name="snippet"><br><br>
                         <label for="body">Body</label><br>
-                        <input type="text" id="body" name="body"><br><br>
+                        <textarea type="text" id="body" name="body"
+                        placeholder="Escribé aqui tu snippet"></textarea>
                         <input type="submit" value="Enviar">
                     </form>
                 </div>
