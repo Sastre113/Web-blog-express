@@ -1,1 +1,1 @@
-link: https://web-exametron-mas-app.herokuapp.com/
+link: https://web-blog-express-mas-app.herokuapp.com/
