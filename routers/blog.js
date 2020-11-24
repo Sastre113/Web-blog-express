@@ -9,8 +9,8 @@ router.post('/blogs' // NOMBRE DE RECURSOS
 
     try {
         await blog.save()
-        res.redirect('/');
-        //res.status(201).send(blog) // Esto muestra lo añadido
+       // res.redirect('/');
+        res.status(201).send(blog) // Esto muestra lo añadido
     } catch (e) {
         res.status(400).send(e)
     }
