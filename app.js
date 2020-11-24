@@ -39,6 +39,16 @@ app.get('/blog', async (req, res) => {
   }
 });
 
+app.get('/post/:id', async (req, res) => {
+  console.log(`Estamos en Blog`);
+  try {
+    const post = await Blog.findById(req.params.id)
+    res.render('post', { title: 'Post' , post});
+  } catch (error) {
+    res.render('post', { title: 'Post' , post: {} });
+  }
+});
+
 app.use(express.json());
 app.use('/api', testRouter);
 

@@ -20,8 +20,9 @@
                 <div class="blog">
                     <h3 class="title"><%= blog.title %></h3>
                     <ul>
-                        <li><%= blog.snippet %></li>
-                        <!-- <li><%= blog.body %></li> -->
+                        <a href="/post/<%= blog._id %>">
+                            <li><%= blog.snippet %></li>
+                        </a>
                     </ul>
                 </div>
 

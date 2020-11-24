@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <header>
+        <%- include("./partials/header.ejs") %>
+        <%- include("./partials/nav.ejs") %>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="left"></div>
+            <div class="center">
+                <div class="center">
+                    <h2>All Blogs
+                        <hr>
+                    </h2>
+                    <div class="blog">
+                        <h3 class="title"><%= post.title %></h3>
+                        <ul>
+                            <li><%= post.snippet %></li>
+                            <li><%= post.body %></li>
+                        </ul>
+                    </div>
+
+                    <% }) %>
+                    <% } else { %>
+                    <p>There are no blogs to display...</p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </main>
+    <footer>
+        <%- include("./partials/footer.ejs") %>
+    </footer>
+</body>
+
+</html>

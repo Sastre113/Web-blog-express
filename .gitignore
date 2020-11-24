@@ -1,4 +1,7 @@
 .env 
+public/style.scss
+public/style.min.css 
+public/style.css.map
 
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
