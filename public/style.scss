@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -8,12 +8,11 @@
 
 #cabecera {
     background-image: url(./img/cabecera.jpg);
-    background-repeat: repeat;
     background-color: rgb(68, 177, 240);
     height: 100px;
 }
 
-#mainTitle {
+#tituloCabecera {
     text-align: center;
     font-family: Goldman;
     color: white;
@@ -29,7 +28,6 @@
 
 #menuNavegacion {
     list-style-type: none;
-    
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -71,6 +69,7 @@
     grid-template-columns: 20% 60% 20% ;
     grid-template-areas: left center right;
     grid-auto-flow: row;
+    padding-bottom: 10px;
 }
 
 
@@ -94,6 +93,7 @@
     .form{
         text-align: center;
         input{
+            color: black;
             border: 2px solid black;
             border-radius: 3px;
         }
@@ -102,6 +102,7 @@
             height: 150px;
             font-size: 16px;
             resize: none;
+            color:black;
         }
     }
 }
@@ -120,13 +121,22 @@
     }
 }
 
+#botonEnviar{
+    color: black;
+    height: 30px;
+    width: 60px;
+}
 
+
+#botonEnviar:hover{
+    opacity: 1;
+}
 
 /* Pie de pagina */
 
 
 #footerBlock {
-    margin-top:10px;
+    margin-top: 10px;
     padding-top: 10px;
     background-color: #333;
     position: fixed;

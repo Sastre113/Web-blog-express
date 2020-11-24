@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -7,12 +7,11 @@
 /* Titulo */
 #cabecera {
   background-image: url(./img/cabecera.jpg);
-  background-repeat: repeat;
   background-color: #44b1f0;
   height: 100px;
 }
 
-#mainTitle {
+#tituloCabecera {
   text-align: center;
   font-family: Goldman;
   color: white;
@@ -56,6 +55,7 @@
   grid-template-columns: 20% 60% 20%;
   grid-template-areas: left center right;
   grid-auto-flow: row;
+  padding-bottom: 10px;
 }
 
 .center {
@@ -81,6 +81,7 @@
 }
 
 .center .form input {
+  color: black;
   border: 2px solid black;
   border-radius: 3px;
 }
@@ -90,6 +91,7 @@
   height: 150px;
   font-size: 16px;
   resize: none;
+  color: black;
 }
 
 .blog ul {
@@ -101,6 +103,16 @@
 
 .blog ul li {
   list-style-type: none;
+}
+
+#botonEnviar {
+  color: black;
+  height: 30px;
+  width: 60px;
+}
+
+#botonEnviar:hover {
+  opacity: 1;
 }
 
 /* Pie de pagina */
