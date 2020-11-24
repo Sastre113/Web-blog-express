@@ -7,16 +7,17 @@
 /* Titulo */
 #cabecera {
   background-image: url(./img/cabecera.jpg);
+  background-repeat: repeat;
   background-color: #44b1f0;
   height: 100px;
 }
 
 #mainTitle {
   text-align: center;
-  padding-top: 25px;
   font-family: Goldman;
   color: white;
   text-shadow: 2px 2px black;
+  padding-top: 25px;
 }
 
 /* Menu de navegacion */
@@ -26,7 +27,6 @@
 
 #menuNavegacion {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
