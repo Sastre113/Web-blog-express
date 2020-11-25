@@ -10,7 +10,7 @@ postRequest.addEventListener('click', async (e) => {
     e.preventDefault()
    
     console.log(e.target.elements);
-    console.log(e.target.)
+    console.log()
     
     const resultado = await axios.post('https://web-blog-express-mas-app.herokuapp.com/api/blogs', {
         question: e.target.elements.question.value,
