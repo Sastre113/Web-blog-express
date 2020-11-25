@@ -9,9 +9,10 @@ postRequest.addEventListener('click', async (e) => {
     console.log(e.target)
     e.preventDefault()
    
-    console.log(e.target.elements)
+    console.log(e.target.elements);
+    console.log(e.target.)
     
-    const resultado = await axios.post('https://x-express-web.herokuapp.com/api/tests', {
+    const resultado = await axios.post('https://web-blog-express-mas-app.herokuapp.com/api/blogs', {
         question: e.target.elements.question.value,
         answer1: e.target.elements.answer1.value,
         answer2: e.target.elements.answer2.value,
@@ -23,21 +24,21 @@ postRequest.addEventListener('click', async (e) => {
 
 readAllRequest.addEventListener('click',async (e) => {
     e.preventDefault(); 
-    const res = await axios.get('https://web--express-mas-app.herokuapp.com/api/s',);
+    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
     console.log(res);
 });
 
 readRequest.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await axios.get('https://web--express-mas-app.herokuapp.com/api/s',);
+    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 });
 
 updateRequest.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await axios.patch('https://web--express-mas-app.herokuapp.com/api/s',);
+    const res = await axios.patch('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 });
 
 deleteRequest.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await axios.delete('https://web--express-mas-app.herokuapp.com/api/s',);
+    const res = await axios.delete('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 });
