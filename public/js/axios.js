@@ -1,16 +1,9 @@
-const { default: Axios } = require("axios");
-
-console.log("hola axios");
-
 const postRequest = document.querySelector('#post');
 const readAllRequest = document.querySelector('#readAll');
 const readRequest = document.querySelector('#read');
 const updateRequest = document.querySelector('#update');
 const deleteRequest = document.querySelector('#delete');
 
-const testPrueba = {
-    // Hay que poner los datos del esquema de DB
-}
 
 postRequest.addEventListener('click', async (e) => {
     e.preventDefault();

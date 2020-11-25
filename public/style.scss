@@ -18,7 +18,7 @@
     color: white;
     text-shadow: 2px 2px black;
     padding-top: 25px;
-    margin:0;
+    margin: 0;
 }
 
 /* Menu de navegacion */
@@ -35,15 +35,15 @@
     margin-left: 100px;
 }
 
-#menuNavegacion  {
-    li{
+#menuNavegacion {
+    li {
         float: left;
-    }  
+    }
 }
 
-#menuNavegacion  {
+#menuNavegacion {
     li {
-        a{
+        a {
             display: block;
             color: white;
             text-align: center;
@@ -54,104 +54,114 @@
 }
 
 #menuNavegacion {
-    li{
-        a:hover{
+    li {
+        a:hover {
             background-color: rgb(22, 143, 199);
             color: white;
         }
     }
-    
 }
 
 /* Contenido */
 
-.grid{
+.grid {
     display: grid;
-    grid-template-columns: 20% 60% 20% ;
+    grid-template-columns: 20% 60% 20%;
     padding-bottom: 10px;
 }
 
+.gridInterface{
+    display: grid;
+    grid-template-columns: 30% 70% ;
+    padding-bottom: 10px;
+}
 
-.center{
-
+.center, .menuHUD {
     background-color: grey;
     color: white;
     padding: 10px;
-    margin: 10px;
+    margin: 20px auto 60px;
     border-radius: 10px;
     justify-self: center;
 
-    h2{
+    h2 {
         text-shadow: black 2px 2px;
         text-align: center;
         margin: 0;
     }
-    .title{
+
+    .title {
         padding-left: 10px;
     }
-    
-    .form{
+
+    ul {
+        list-style-type: none;
         text-align: center;
-        input{
+        a {
+            color: white;
+            background-color: black;
+            border-radius: 4px;
+            padding: 2px;
+            margin: 10px auto 20px;
+        }
+    }
+
+    .form {
+        text-align: center;
+
+        input {
             color: black;
             border: 2px solid black;
             border-radius: 3px;
         }
-        textarea{
+
+        textarea {
             width: 100%;
             height: 150px;
             font-size: 16px;
             resize: none;
-            color:black;
+            color: black;
         }
     }
 }
 
-
-.blog{
-    ul{
+.blog {
+    ul {
         background-color: black;
         color: white;
         border-radius: 5px;
         text-align: center;
 
-        li{
+        li {
             list-style-type: none;
         }
 
-        a{
+        a {
             color: white;
         }
     }
 }
 
-#botonEnviar{
+#botonEnviar {
     color: black;
     height: 30px;
     width: 60px;
 }
 
-
-#botonEnviar:hover{
+#botonEnviar:hover {
     opacity: 1;
 }
 
-#json_get{
-    color:black;
+#json_get {
+    color: black;
 }
-
-
-
 
 /* Pie de pagina */
 
-
 #footerBlock {
     display: inline-block;
-    margin-top: 10px;
     padding-top: 10px;
     background-color: #333;
-    
     height: 50px;
     position: fixed;
     width: 100%;

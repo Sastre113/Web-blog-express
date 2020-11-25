@@ -57,36 +57,55 @@
   padding-bottom: 10px;
 }
 
-.center {
+.gridInterface {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-bottom: 10px;
+}
+
+.center, .menuHUD {
   background-color: grey;
   color: white;
   padding: 10px;
-  margin: 10px;
+  margin: 20px auto 60px;
   border-radius: 10px;
   justify-self: center;
 }
 
-.center h2 {
+.center h2, .menuHUD h2 {
   text-shadow: black 2px 2px;
   text-align: center;
   margin: 0;
 }
 
-.center .title {
+.center .title, .menuHUD .title {
   padding-left: 10px;
 }
 
-.center .form {
+.center ul, .menuHUD ul {
+  list-style-type: none;
   text-align: center;
 }
 
-.center .form input {
+.center ul a, .menuHUD ul a {
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 10px auto 20px;
+}
+
+.center .form, .menuHUD .form {
+  text-align: center;
+}
+
+.center .form input, .menuHUD .form input {
   color: black;
   border: 2px solid black;
   border-radius: 3px;
 }
 
-.center .form textarea {
+.center .form textarea, .menuHUD .form textarea {
   width: 100%;
   height: 150px;
   font-size: 16px;
@@ -126,7 +145,6 @@
 /* Pie de pagina */
 #footerBlock {
   display: inline-block;
-  margin-top: 10px;
   padding-top: 10px;
   background-color: #333;
   height: 50px;
