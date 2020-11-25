@@ -29,6 +29,11 @@ app.get('/',  async (req, res) => {
   res.render('index', { title: 'Bienvenido'});
 });
 
+app.get('/interfaz',  async (req, res) => {
+  console.log(`Estamos en interfaz`);
+  res.render('interfaz', { title: 'interfaz'});
+});
+
 app.get('/blog', async (req, res) => {
   console.log(`Estamos en Blog`);
   try {

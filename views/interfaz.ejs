@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <header>
+        <%- include("./partials/header.ejs") %>
+        <%- include("./partials/nav.ejs") %>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="left"></div>
+            <div class="center">
+
+                <ul>
+                    <li>
+                        <a id="post" href="#">post test</a>
+                    </li>
+                    <li>
+                        <a id="readAll" href="#">read the test</a>
+                    </li>
+                    <li>
+                        <a id="read" href="#">read test</a>
+                    </li>
+                    <li>
+                        <a id="update" href="#">update test</a>
+                    </li>
+                    <li>
+                        <a id="delete" href="#">delete test</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="right"></div>
+        </div>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>
