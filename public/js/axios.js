@@ -18,13 +18,14 @@ postRequest.addEventListener('click', async (e) => {
         answer2: e.target.elements.answer2.value,
         answer3: e.target.elements.answer3.value,
         answer4: e.target.elements.answer4.value
-    })
-    //console.log(resultado)
+    });
+    console.log(resultado)
 });
 
 readAllRequest.addEventListener('click',async (e) => {
     e.preventDefault(); 
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
+    document.querySelector('#HUD').innerHTML = "<h1> HOLA PEPE</h1>";
     console.log(res);
 });
 
