@@ -27,12 +27,10 @@ readAllRequest.addEventListener('click', async (e) => {
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 
     var campos = {};
-    document.querySelector('#HUD').innerHTML = res.data.forEach(element => {
+    res.data.forEach(element => {
         campos[element.name] = element.value;
     });
-    campos.forEach(valor => {
-        console.log(valor)
-    });
+    console.log(campos)
     console.log(res);
 });
 
