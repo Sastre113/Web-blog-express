@@ -8,10 +8,10 @@ const deleteRequest = document.querySelector('#delete');
 postRequest.addEventListener('click', async (e) => {
     console.log(e.target)
     e.preventDefault()
-   
-    console.log("Esto es elements",e.target.elements);
+
+    console.log("Esto es elements", e.target.elements);
     console.log()
-    
+
     const resultado = await axios.post('https://web-blog-express-mas-app.herokuapp.com/api/blogs', {
         question: e.target.elements.question.value,
         answer1: e.target.elements.answer1.value,
@@ -22,28 +22,31 @@ postRequest.addEventListener('click', async (e) => {
     console.log(resultado)
 });
 
-readAllRequest.addEventListener('click',async (e) => {
-    e.preventDefault(); 
+readAllRequest.addEventListener('click', async (e) => {
+    e.preventDefault();
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
-    
+
     var campos = {};
     document.querySelector('#HUD').innerHTML = res.data.forEach(element => {
-       campos[element.name] = element.value;
+        campos[element.name] = element.value;
+        campos.forEach(valor => {
+            console.log(valor)
+        });
     });
     console.log(res);
 });
 
-readRequest.addEventListener('click',async (e) => {
+readRequest.addEventListener('click', async (e) => {
     e.preventDefault();
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 });
 
-updateRequest.addEventListener('click',async (e) => {
+updateRequest.addEventListener('click', async (e) => {
     e.preventDefault();
     const res = await axios.patch('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 });
 
-deleteRequest.addEventListener('click',async (e) => {
+deleteRequest.addEventListener('click', async (e) => {
     e.preventDefault();
     const res = await axios.delete('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
-});
+})
