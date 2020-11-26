@@ -29,8 +29,8 @@ form.addEventListener('submit', async (e) => {
         snippet: e.target.elements.snippet.value,
         body: e.target.elements.body.value,
     });
-    document.querySelector('#right').innerHTML="";
-    document.querySelector('#right').innerHTML=contenido;
+    
+    form.reset();
     console.log(resultado)
 });
 
