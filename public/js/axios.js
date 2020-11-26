@@ -4,6 +4,7 @@ const readRequest = document.querySelector('#read');
 const updateRequest = document.querySelector('#update');
 const deleteRequest = document.querySelector('#delete');
 
+const contenido = document.querySelector('#right');
 const form = document.querySelector('#formDin');
 
 postRequest.addEventListener('mouseover',  (e) =>{
@@ -28,8 +29,8 @@ form.addEventListener('submit', async (e) => {
         snippet: e.target.elements.snippet.value,
         body: e.target.elements.body.value,
     });
-    document.querySelector('#HUD').innerHTML="";
-    document.querySelector('#HUD').innerHTML=form;
+    document.querySelector('#right').innerHTML="";
+    document.querySelector('#right').innerHTML=contenido;
     console.log(resultado)
 });
 
