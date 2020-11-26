@@ -25,7 +25,8 @@ postRequest.addEventListener('click', async (e) => {
 readAllRequest.addEventListener('click',async (e) => {
     e.preventDefault(); 
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
-    document.querySelector('#HUD').innerHTML = "<h1> HOLA PEPE</h1>";
+    
+    document.querySelector('#HUD').innerHTML = res.innerHTML;
     console.log(res);
 });
 
