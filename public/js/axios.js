@@ -29,9 +29,9 @@ readAllRequest.addEventListener('click', async (e) => {
     var campos = {};
     document.querySelector('#HUD').innerHTML = res.data.forEach(element => {
         campos[element.name] = element.value;
-        campos.forEach(valor => {
-            console.log(valor)
-        });
+    });
+    campos.forEach(valor => {
+        console.log(valor)
     });
     console.log(res);
 });
