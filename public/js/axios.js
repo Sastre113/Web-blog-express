@@ -4,7 +4,6 @@ const readRequest = document.querySelector('#read');
 const updateRequest = document.querySelector('#update');
 const deleteRequest = document.querySelector('#delete');
 
-
 const form = document.querySelector('#formDin');
 
 postRequest.addEventListener('mouseover',  (e) =>{
@@ -29,6 +28,8 @@ form.addEventListener('submit', async (e) => {
         snippet: e.target.elements.snippet.value,
         body: e.target.elements.body.value,
     });
+
+    document.querySelector('#HUD').innerHTML=form;
     console.log(resultado)
 });
 
