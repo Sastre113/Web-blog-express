@@ -26,7 +26,7 @@ readAllRequest.addEventListener('click',async (e) => {
     e.preventDefault(); 
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
     
-    document.querySelector('#HUD').innerHTML = res.innerHTML;
+    document.querySelector('#HUD').innerHTML = res.elements.innerHTML;
     console.log(res);
 });
 
