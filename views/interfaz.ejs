@@ -13,19 +13,19 @@
             <div class="menuHUD">
                 <ul>
                     <li>
-                        <a id="post" href="#">post test</a>
+                        <p><a id="post" href="#">Post Test</a></p>
                     </li>
                     <li>
-                        <a id="readAll" href="#">read the test</a>
+                        <p><a id="readAll" href="#">Read All Test</a></p>
                     </li>
                     <li>
-                        <a id="read" href="#">read test</a>
+                        <p><a id="read" href="#">Read Test</a></p>
                     </li>
                     <li>
-                        <a id="update" href="#">update test</a>
+                        <p><a id="update" href="#">Update Test</a></p>
                     </li>
                     <li>
-                        <a id="delete" href="#">delete test</a>
+                        <p><a id="delete" href="#">Delete Test</a></p>
                     </li>
                 </ul>
 
@@ -34,22 +34,44 @@
                 <div id="HUD">
                     <h1> Debe elegir una opción del menú de la izquierda.</h1>
                 </div>
-                <div>
-                    <form method="POST" id="formDin" action="/api/blogs"  style="display: none">
+                <div id="formularioDin" class="animate__animated animate__fadeIn">
+                    <form method="POST" action="/api/blogs">
                         <label for="title">Titulo</label><br>
-                        <input type="text" id="titulo" ><br>
+                        <input type="text" id="titulo"><br>
                         <label for="snippet">Tab trigger</label><br>
-                        <input type="text" id="snippet" ><br><br>
+                        <input type="text" id="snippet"><br><br>
                         <label for="body">Body</label><br>
                         <textarea type="text" id="body" placeholder="Escribé aqui tu snippet"></textarea>
-                        <input type="submit" value="Crear test">
+                        <input id="submitButton" type="submit" value="Crear test">
                     </form>
+                </div>
+
+                <div id="getDatos" class="animate__animated animate__fadeIn">
+                    HOLA PEPE , ESTOY AQUI
+                </div>
+
+                <div id="getUnDato" class="animate__animated animate__fadeIn">
+                    Esto solo es 1 dato.
+                </div>
                 
+                <div id="updateDatos" class="animate__animated animate__fadeIn">
+                    Esto actualiz un dato
+                </div>
+
+                <div id="deleteDatos"  class="animate__animated animate__fadeIn">
+                    Esto borra datos
+                </div>
+
+
+
+
             </div>
-        </div>
     </main>
 
     <%- include("./partials/footer.ejs") %>
+    <!-- Importacion de axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/js/axios.js"></script>
 </body>
 
 </html>
