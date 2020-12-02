@@ -45,13 +45,7 @@ router.get('/blogs/:title', async (req, res) => {
     const title = req.params.title
 
     try {
-        const blog = await Blog.findById(title)
-
-        if (!blog) {
-            return res.status(404).send()
-        }
-
-        res.send(blog)
+        res.send('blogs' + title)
     } catch (e) {
         res.status(500).send()
     }
