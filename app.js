@@ -54,16 +54,6 @@ app.get('/post/:id', async (req, res) => {
   }
 });
 
-app.get('/blogs/:title', async (req, res) => {
-  console.log(`Estamos en Post`);
-  try {
-    const postTitulo = await Blog.findById(req.params.title)
-    res.render('post', { title: 'Post' , postTitulo});
-  } catch (error) {
-    res.render('post', { title: 'Post' , postTitulo: {} });
-  }
-});
-
 app.get('/usandoAxios', async (req, res) => {
   console.log(`Estamos en Axios`);
   try {

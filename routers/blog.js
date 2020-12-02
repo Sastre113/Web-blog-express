@@ -41,22 +41,6 @@ router.get('/blogs/:id', async (req, res) => {
     }
 })
 
-router.get('/blogs/:title', async (req, res) => {
-    const titulo = req.params.title;
-
-    try {
-        const blog = await Blog.findById(titulo)
-
-        if (!blog) {
-            return res.status(404).send()
-        }
-
-        res.send(blog)
-    } catch (e) {
-        res.status(500).send()
-    }
-})
-
 
 router.patch('/blogs/:id', async (req, res) => {
     const updates = Object.keys(req.body)
