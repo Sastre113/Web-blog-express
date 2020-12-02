@@ -54,7 +54,7 @@ app.get('/post/:id', async (req, res) => {
   }
 });
 
-app.get('/post/:title', async (req, res) => {
+app.get('/blogs/:title', async (req, res) => {
   console.log(`Estamos en Post`);
   try {
     const postTitulo = await Blog.findById(req.params.title)
