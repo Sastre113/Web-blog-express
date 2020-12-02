@@ -65,7 +65,7 @@ router.patch('/blogs/:id', async (req, res) => {
 
 router.delete('/blogs/:title', async (req, res) => {
     try {
-        const blog = await Blog.findByIdAndDelete(req.params.id)
+        const blog = await Blog.findByIdAndDelete(req.params.title)
 
         if (!blog) {
             res.status(404).send()
