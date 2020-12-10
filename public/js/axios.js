@@ -61,7 +61,7 @@ readAllRequest.addEventListener('mouseover', async (e) =>{
     for(post of blog){
         selector.insertAdjacentHTML("afterbegin" ,
             
-            `<div data-id=${post._id}> 
+            `<div id="post" data-id=${post._id}> 
                 Titulo: ${post.title} <br>
                 Snippet: ${post.snippet} <br>
                 Cuerpo: ${post.body} <br>
