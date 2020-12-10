@@ -51,7 +51,7 @@ form.addEventListener('submit', async (e) => {
 // Boton Obtener todos los datos
 
 
-readAllRequest.addEventListener('mouseover',  (e) =>{
+readAllRequest.addEventListener('mouseover', async (e) =>{
     e.preventDefault()
     const selector = mostrarSelector("#getDatos");
 
@@ -65,10 +65,9 @@ readAllRequest.addEventListener('mouseover',  (e) =>{
     }
 });
 
-readAllRequest.addEventListener('click',async (e) => {
+readAllRequest.addEventListener('click', (e) => {
     e.preventDefault(); 
    
-
     console.log(blog);
 });
 
