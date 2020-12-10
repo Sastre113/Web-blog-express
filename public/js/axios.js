@@ -57,9 +57,12 @@ readAllRequest.addEventListener('mouseover', async (e) =>{
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 
     let blog = res.data;
+    selector.innerHTML = ""; // Esto borra el contenido que hubiera
     for(post of blog){
         selector.insertAdjacentHTML("afterbegin" ,
-            `Titulo: ${post.title}`
+            `Titulo: ${post.title} <br>
+            Snippet: ${post.snippet} <br>
+            Cuerpo: ${post.body} <br>`
         );
     }
 });
