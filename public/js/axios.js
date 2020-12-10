@@ -18,6 +18,8 @@ function mostrarSelector(target){
         else
             document.querySelector(target).style.display = "block";
     });
+
+    return target;
 }
 
 // Boton Post
@@ -51,15 +53,23 @@ form.addEventListener('submit', async (e) => {
 
 readAllRequest.addEventListener('mouseover',  (e) =>{
     e.preventDefault()
-    mostrarSelector("#getDatos");
+    const selector = mostrarSelector("#getDatos");
+
+    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
+
+    let blog = res.data;
+    for(post of blog){
+        selector.insertAdjacentHTML("afterbegin" ,
+            `Titulo: ${post.title}`
+        );
+    }
 });
 
 readAllRequest.addEventListener('click',async (e) => {
     e.preventDefault(); 
-    document.querySelector('#HUD').innerHTML = "";
-    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
-    
-    console.log(res);
+   
+
+    console.log(blog);
 });
 
 // Boton Obtener 1 dato
@@ -72,7 +82,7 @@ readRequest.addEventListener('mouseover',  (e) =>{
 
 readRequest.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
+    const res = await axios.get(`https://web-blog-express-mas-app.herokuapp.com/api/blogs/${e}`,);
 });
 
 

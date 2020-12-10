@@ -6,7 +6,6 @@ const router = new express.Router()
 router.post('/blogs' // NOMBRE DE RECURSOS
 , async (req, res) => {
     const blog = new Blog(req.body)
-
     try {
         await blog.save()
        // res.redirect('/');
