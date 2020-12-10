@@ -18,8 +18,6 @@ function mostrarSelector(target){
         else
             document.querySelector(target).style.display = "block";
     });
-
-    return target;
 }
 
 // Boton Post
@@ -53,7 +51,8 @@ form.addEventListener('submit', async (e) => {
 
 readAllRequest.addEventListener('mouseover', async (e) =>{
     e.preventDefault()
-    const selector = mostrarSelector("#getDatos");
+    const selector = document.querySelector("#getDatos");
+    mostrarSelector("#getDatos");
 
     const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
 
