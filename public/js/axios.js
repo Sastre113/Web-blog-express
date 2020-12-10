@@ -60,9 +60,12 @@ readAllRequest.addEventListener('mouseover', async (e) =>{
     selector.innerHTML = ""; // Esto borra el contenido que hubiera
     for(post of blog){
         selector.insertAdjacentHTML("afterbegin" ,
-            `Titulo: ${post.title} <br>
-            Snippet: ${post.snippet} <br>
-            Cuerpo: ${post.body} <br>`
+            
+            `<div data-id=${post._id}> 
+                Titulo: ${post.title} <br>
+                Snippet: ${post.snippet} <br>
+                Cuerpo: ${post.body} <br>
+            </div>`
         );
     }
 });
