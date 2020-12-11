@@ -49,17 +49,31 @@ form.addEventListener('submit', async (e) => {
 // Boton Obtener todos los datos
 
 
-readAllRequest.addEventListener('mouseover',  (e) =>{
+readAllRequest.addEventListener('mouseover', async (e) =>{
     e.preventDefault()
+    const selector = document.querySelector("#getDatos");
     mostrarSelector("#getDatos");
+
+    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
+
+    let blog = res.data;
+    selector.innerHTML = ""; // Esto borra el contenido que hubiera
+    for(post of blog){
+        selector.insertAdjacentHTML("afterbegin" ,
+            
+            `<div id="post" data-id=${post._id}> 
+                Titulo: ${post.title} <br>
+                Snippet: ${post.snippet} <br>
+                Cuerpo: ${post.body} <br>
+            </div>`
+        );
+    }
 });
 
-readAllRequest.addEventListener('click',async (e) => {
+readAllRequest.addEventListener('click', (e) => {
     e.preventDefault(); 
-    document.querySelector('#HUD').innerHTML = "";
-    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
-    
-    console.log(res);
+   
+    console.log(blog);
 });
 
 // Boton Obtener 1 dato
@@ -72,7 +86,7 @@ readRequest.addEventListener('mouseover',  (e) =>{
 
 readRequest.addEventListener('click',async (e) => {
     e.preventDefault();
-    const res = await axios.get('https://web-blog-express-mas-app.herokuapp.com/api/blogs',);
+    const res = await axios.get(`https://web-blog-express-mas-app.herokuapp.com/api/blogs/${e}`,);
 });
 
 

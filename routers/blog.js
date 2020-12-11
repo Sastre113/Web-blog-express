@@ -6,7 +6,6 @@ const router = new express.Router()
 router.post('/blogs' // NOMBRE DE RECURSOS
 , async (req, res) => {
     const blog = new Blog(req.body)
-
     try {
         await blog.save()
        // res.redirect('/');
@@ -29,7 +28,7 @@ router.get('/blogs/:id', async (req, res) => {
     const _id = req.params.id
 
     try {
-        const blog = await Blog.findById(_id)
+        const blog = await Blog.find(_id)
 
         if (!blog) {
             return res.status(404).send()
@@ -40,6 +39,7 @@ router.get('/blogs/:id', async (req, res) => {
         res.status(500).send()
     }
 })
+
 
 router.patch('/blogs/:id', async (req, res) => {
     const updates = Object.keys(req.body)
@@ -63,9 +63,9 @@ router.patch('/blogs/:id', async (req, res) => {
     }
 })
 
-router.delete('/blogs/:id', async (req, res) => {
+router.delete('/blogs/:title', async (req, res) => {
     try {
-        const blog = await Blog.findByIdAndDelete(req.params.id)
+        const blog = await Blog.findByIdAndDelete('blogs' + req.params.title)
 
         if (!blog) {
             res.status(404).send()

@@ -71,6 +71,8 @@
   margin: 20px auto 60px;
   border-radius: 10px;
   justify-self: center;
+  height: 205px;
+  position: sticky;
 }
 
 .center h2,
@@ -151,6 +153,13 @@
 
 .blog ul a {
   color: white;
+}
+
+#post {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 #botonEnviar {
